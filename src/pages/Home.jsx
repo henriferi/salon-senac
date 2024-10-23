@@ -10,41 +10,76 @@ const Home = () => {
   const stylesData = [
     {
       id: 1,
-      image: '/images/style1.jpg',
+      image: '/senac-match.jpg',
       title: 'Corte Moderno',
       description: 'Um corte cheio de estilo e modernidade.',
     },
     {
       id: 2,
-      image: '/images/style2.jpg',
+      image: '/senac-match.jpg',
       title: 'Coloração Vibrante',
       description: 'Cores vibrantes para um visual ousado.',
     },
     {
       id: 3,
-      image: '/images/style3.jpg',
-      title: 'Corte Clássico',
-      description: 'Um corte que nunca sai de moda.',
+      image: '/senac-match.jpg',
+      title: 'Corte Moderno',
+      description: 'Um corte cheio de estilo e modernidade.',
     },
     {
       id: 4,
-      image: '/images/style4.jpg',
-      title: 'Mechas Iluminadas',
-      description: 'Realce a beleza do seu cabelo com mechas.',
+      image: '/senac-match.jpg',
+      title: 'Coloração Vibrante',
+      description: 'Cores vibrantes para um visual ousado.',
     },
     {
       id: 5,
-      image: '/images/style3.jpg',
-      title: 'Corte Clássico',
-      description: 'Um corte que nunca sai de moda.',
+      image: '/senac-match.jpg',
+      title: 'Corte Moderno',
+      description: 'Um corte cheio de estilo e modernidade.',
     },
     {
       id: 6,
-      image: '/images/style4.jpg',
-      title: 'Mechas Iluminadas',
-      description: 'Realce a beleza do seu cabelo com mechas.',
+      image: '/senac-match.jpg',
+      title: 'Coloração Vibrante',
+      description: 'Cores vibrantes para um visual ousado.',
     },
-    // Adicione mais estilos conforme necessário
+    {
+      id: 7,
+      image: '/senac-match.jpg',
+      title: 'Corte Moderno',
+      description: 'Um corte cheio de estilo e modernidade.',
+    },
+    {
+      id: 8,
+      image: '/senac-match.jpg',
+      title: 'Coloração Vibrante',
+      description: 'Cores vibrantes para um visual ousado.',
+    },
+    {
+      id: 9,
+      image: '/senac-match.jpg',
+      title: 'Corte Moderno',
+      description: 'Um corte cheio de estilo e modernidade.',
+    },
+    {
+      id: 10,
+      image: '/senac-match.jpg',
+      title: 'Coloração Vibrante',
+      description: 'Cores vibrantes para um visual ousado.',
+    },
+    {
+      id: 11,
+      image: '/senac-match.jpg',
+      title: 'Corte Moderno',
+      description: 'Um corte cheio de estilo e modernidade.',
+    },
+    {
+      id: 12,
+      image: '/senac-match.jpg',
+      title: 'Coloração Vibrante',
+      description: 'Cores vibrantes para um visual ousado.',
+    },
   ];
 
   const handleMatch = (style) => {
