@@ -1,0 +1,105 @@
+.bg-body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../assets/senacbg.jpg'); /* Caminho da imagem de fundo */
+  background-size: cover; /* Para a imagem cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  height: 100vh; /* Define altura mínima do body */
+  width: 100vw; /* Garante que o body ocupe 100% da largura */
+  display: flex; /* Adicionado para usar flexbox */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%; /* Largura relativa para melhor responsividade */
+  max-width: 800px; /* Limita a largura máxima do contêiner */
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding: 3rem;
+}
+
+input {
+  padding: 15px; /* Aumenta o espaço interno dos campos de entrada */
+  font-size: 1.5rem; /* Tamanho de fonte maior */
+  border-radius: 10px; /* Cantos arredondados nos campos de entrada */
+  outline: none;
+  border: none;
+}
+
+button {
+  color: white;
+  margin-top: 1.5rem;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  background: #006B99;
+  padding: 10px;
+  font-size: 1.3em;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #005B8C;
+}
+
+p {
+  cursor: pointer;
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+fieldset {
+  background-color: rgba(173, 216, 230, 0.5);
+  border: 2px solid #006B99; /* Borda colorida para o fieldset */
+  border-radius: 5px; /* Cantos arredondados */
+  width: 100%; /* Garante que o fieldset ocupe 100% da largura */
+}
+
+legend {
+  background-color: #006B99;
+  border-radius: 5px;
+  color: white;
+  font-size:1.8em;
+  font-weight: bold; /* Destaca o texto do legend */ /* Cor do texto do legend */
+  padding: 0 40px; /* Espaçamento em torno do legend */
+}
+
+
+.logo {
+  width: 50%; /* Você pode ajustar a largura conforme necessário */
+  max-width: 200px; /* Largura máxima para a logo */
+  margin-bottom: 20px; /* Espaço abaixo da logo */
+}
+
+/* Adicionando media queries para responsividade */
+@media (max-width: 768px) {
+  .logo {
+    width: 70%; /* Aumenta a logo em telas menores */
+  }
+  
+  .auth-container {
+    width: 95%; /* Largura um pouco maior em telas pequenas */
+  }
+  
+  input, button {
+    font-size: 1rem; /* Ajusta o tamanho da fonte para dispositivos menores */
+  }
+  form {
+    padding: 0;
+  }
+}

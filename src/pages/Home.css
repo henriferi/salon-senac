@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/images/senac-background.jpg'); /* Caminho da imagem de fundo */
+  background-size: cover; /* Para a imagem cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  height: 100vh; /* Define altura mínima do body */
+}
+
+.home-container {
+  position: relative; /* Necessário para o layout */
+  display: flex; /* Usando flexbox para centralização */
+  flex-direction: column; /* Direção das colunas */
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+.info-section {
+  text-align: center; /* Centraliza o texto */
+  margin: 20px; /* Margem para os textos */
+  margin-bottom: 40px; /* Adiciona espaço abaixo da seção de informações */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Muda para auto-fill e minmax */
+  gap: 20px; /* Espaçamento entre os itens do grid */
+  padding: 20px; /* Espaçamento interno do grid */
+  width: 100%; /* Garante que o grid ocupe 100% da largura */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+  margin-top: 20px; /* Garante que o grid não sobreponha a info-section */
+  max-width: 1200px; /* Largura máxima do grid */
+}
+
+.style-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: white; /* Fundo branco para os cartões */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave nos cartões */
+}

@@ -1,0 +1,27 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8e24aa;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .menu li a:hover {
+    color: #ffcc00;
+  }
+  
