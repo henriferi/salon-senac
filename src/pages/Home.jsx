@@ -17,19 +17,19 @@ const Home = () => {
     },
     {
       id: 2,
-      image: '/senac-match.jpg',
+      image: '/cabelo1.jpg',
       title: 'Coloração Vibrante',
       description: 'Cores vibrantes para um visual ousado.',
     },
     {
       id: 3,
-      image: '/senac-match.jpg',
+      image: '/cabelo2.jpg',
       title: 'Corte Moderno',
       description: 'Um corte cheio de estilo e modernidade.',
     },
     {
       id: 4,
-      image: '/senac-match.jpg',
+      image: '/cabelo3.jpg',
       title: 'Coloração Vibrante',
       description: 'Cores vibrantes para um visual ousado.',
     },
@@ -111,7 +111,7 @@ const Home = () => {
       <div className="home-container">
         {/* Textos de incentivo e contatos */}
         <div className="info-section">
-          <img src="/senac.png" alt="Logo Senac" className='logo' /> 
+          <img src="/senac.png" alt="Logo Senac" className='logo' />
           <h1>Venha conhecer nossos serviços!</h1>
           <p>Transforme seu visual com os melhores profissionais do Senac.</p>
           <p>Contato: (81) 99999-9999 | Email: contato@senacpe.com.br</p>
@@ -121,7 +121,11 @@ const Home = () => {
         <div className="grid-container">
           {stylesData.map((style) => (
             <div key={style.id} className="style-card">
-              <img src={style.image} alt={style.title} />
+              <img
+                src={style.image}
+                alt={style.title}
+                style={{ width: '100%', height: '250px', objectFit: 'cover' }} // Tamanhos fixos para a imagem
+              />
               <h2>{style.title}</h2>
               <p>{style.description}</p>
               <button onClick={() => handleMatch(style)}>Dê Match</button>

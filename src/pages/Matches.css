@@ -1,0 +1,134 @@
+.match-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .match-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Aumenta o espaço entre a imagem e o texto */
+    background-color: white;
+    padding: 50px; /* Aumenta o padding para mais espaço interno */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Aumenta a largura do container */
+    max-width: 1400px; /* Define uma largura máxima maior */
+    height: 550px; /* Aumenta a altura do container */
+  }
+  
+  .match-content img {
+    width: 50%; /* Aumenta o tamanho da imagem */
+    height: 100%; /* A imagem ocupa a altura do container */
+    object-fit: cover; /* Garante que a imagem seja redimensionada corretamente */
+    border-radius: 10px;
+  }
+  
+  .match-content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 50%; /* O texto ocupa metade da largura restante */
+  }
+  
+  .match-content-text h1 {
+    font-size: 3rem; /* Aumenta o tamanho do título */
+    color: #006B99;
+    margin-bottom: 20px;
+  }
+  
+  .match-content-text p {
+    font-size: 1.6rem; /* Aumenta o tamanho da descrição */
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .match-content-text label {
+    font-size: 1.4rem; /* Aumenta o tamanho do label */
+    margin-bottom: 10px;
+  }
+  
+  .match-content-text input[type="date"] {
+    padding: 15px; /* Aumenta o padding do input */
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte do input */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 30px; /* Aumenta o espaço entre os botões */
+    margin-top: 30px;
+  }
+  
+  .buttons button {
+    background-color: #006B99;
+    color: white;
+    padding: 15px 30px; /* Aumenta o padding dos botões */
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte dos botões */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttons button:hover {
+    background-color: #005B8C;
+  }
+  
+  .buttons button:nth-child(2) {
+    background-color: #F68B1F;
+  }
+  
+  .buttons button:nth-child(2):hover {
+    background-color: #e57a1b;
+  }
+  
+  @media (max-width: 768px) {
+    .match-content {
+      flex-direction: column;
+      width: 100%;
+      height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+      padding: 20px;
+    }
+  
+    .match-content img {
+      width: 100%; /* A imagem ocupará 100% da largura em telas pequenas */
+      height: auto; /* Altura se ajustará ao conteúdo */
+      margin-top: 10%;
+    }
+  
+    .match-content-text {
+      width: 100%; /* O texto ocupará 100% da largura em telas pequenas */
+      text-align: center; /* Centraliza o texto em telas pequenas */
+      align-items: center; /* Alinha o conteúdo ao centro */
+    }
+  
+    .match-content-text h1 {
+      font-size: 2rem; /* Tamanho do título menor para celulares */
+    }
+  
+    .match-content-text p {
+      font-size: 1.4rem; /* Tamanho do parágrafo menor para celulares */
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 20px; /* Espaçamento menor entre os botões */
+      width: 100%; /* Botões ocuparão toda a largura em telas menores */
+    }
+  
+    .buttons button {
+      width: 100%; /* Botões ocuparão 100% da largura */
+      padding: 10px;
+      font-size: 1.2rem; /* Fonte menor para os botões em telas pequenas */
+    }
+  }

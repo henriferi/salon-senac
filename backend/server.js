@@ -9,6 +9,10 @@ const prisma = new PrismaClient();
 app.use(bodyParser.json());
 app.use(cors());
 
+// Importar as rotas de feedback
+const feedbackRoutes = require('./feedback'); // Ajuste o caminho se necessário
+app.use(feedbackRoutes); // Usar as rotas de feedback
+
 // Rota de cadastro
 app.post('/register', async (req, res) => {
   const { username, email, password } = req.body;
@@ -56,11 +60,6 @@ app.post('/login', async (req, res) => {
   res.status(200).json({ message: 'Login bem-sucedido', user: user });
 });
 
-// Iniciar o servidor
-app.listen(3001, () => {
-  console.log('Servidor rodando na porta 3001');
-});
-
 // Rota para listar todos os usuários cadastrados: http://localhost:3001/users
 app.get('/users', async (req, res) => {
   try {
@@ -70,4 +69,9 @@ app.get('/users', async (req, res) => {
     console.error('Erro ao buscar usuários:', error);
     res.status(500).json({ message: 'Erro ao buscar usuários' });
   }
+});
+
+// Iniciar o servidor
+app.listen(3001, () => {
+  console.log('Servidor rodando na porta 3001');
 });
