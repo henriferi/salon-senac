@@ -1,67 +1,54 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('/senac-bg-chat.webp'); /* Caminho da imagem de fundo */
-  background-position: cover; /* Centraliza a imagem */
-  background-repeat: repeat;
-  color: black; /* Cor do texto global definida como preta */
 }
 
 .info-section {
-  text-align: center; /* Centraliza o texto */
+  text-align: center; 
   font-family: "Montserrat", sans-serif;
-  margin: 10%; /* Margem para os textos */
-  margin-bottom: 40px; /* Adiciona espaço abaixo da seção de informações */
+  margin: 10%; 
+  margin-bottom: 40px; 
   background-color: rgba(173, 216, 230, 0.9);
   border-radius: 10px;
   padding:1%;
-  color: black; /* Azul para os textos de destaque */
+  color: black; 
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas flexíveis, começando de 300px */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   margin-bottom: 0.5em;
-  gap: 30px 15px; /* Espaçamento entre os itens do grid */
-  padding: 20px; /* Espaçamento interno do grid */
-  width: 100%; /* Garante que o grid ocupe 100% da largura */
-  justify-content: center; /* Centraliza o grid horizontalmente */
-  box-sizing: border-box; /* Inclui padding e borda na largura total */
-  margin-top: 20px; /* Espaço entre o grid e a seção anterior */
+  gap: 30px 15px; 
+  padding: 20px; 
+  width: 100%;
+  justify-content: center; 
+  box-sizing: border-box; 
+  margin-top: 20px; 
 }
 
 .style-card {
-  border: 2px solid #006B99; /* Bordas azuis */
+  border: 2px solid #006B99; 
   padding: 10px;
   text-align: center;
-  background-color: rgba(173, 216, 230, 0.9); /* Fundo branco para os cartões */
-  color: black; /* Texto preto */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave nos cartões */
-  display: flex; /* Usa flexbox para o layout interno */
-  flex-direction: column; /* Direciona os itens na coluna */
-  justify-content: space-between; /* Distribui o espaço entre os itens */
-  height: 100%; /* Garante que o cartão ocupe toda a altura disponível */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação no hover */
+  background-color: rgba(173, 216, 230, 0.9); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  height: 100%; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .style-card:hover {
-  transform: translateY(-5px); /* Levanta o cartão no hover */
-  box-shadow: 15px 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
-  border-color: #006B99; /* Borda azul no hover */
-}
-
-.style-card h3 {
-  color: #006B99; /* Títulos dos cartões em azul */
-}
-
-.style-card p {
-  color: black; /* Textos dos cartões em preto */
+  transform: translateY(-5px); 
+  box-shadow: 15px 4px 8px rgba(0, 0, 0, 0.2); 
+  border-color: #006B99; 
 }
 
 .style-card button {
   font-family: "Playfair Display SC", serif;
-  background-color: #F68B1F; /* Botão azul */
-  color: white; /* Texto do botão em branco */
+  background-color: #006B99; 
+  color: white; 
   font-size: 1.2em;
   border: none;
   padding: 10px;
@@ -70,7 +57,7 @@ body {
 }
 
 .style-card button:hover {
-  background-color: black; /* Cor de fundo preta no hover */
+  background-color: #F68B1F; 
 }
 
 @media (max-width: 768px) {

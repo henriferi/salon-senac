@@ -6,6 +6,7 @@ const LoginRegister = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState(''); 
   const [message, setMessage] = useState('');
 
   const toggleForm = () => {
@@ -14,6 +15,12 @@ const LoginRegister = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+
+    if (password !== confirmPassword) {
+      setMessage('As senhas não coincidem. Por favor, verifique.');
+      return;
+    }
+
     try {
       const response = await fetch('http://localhost:3001/register', {
         method: 'POST',
@@ -25,7 +32,7 @@ const LoginRegister = () => {
 
       if (response.ok) {
         setMessage('Cadastro bem-sucedido. Agora você pode fazer login.');
-        setIsRegister(false); // Alterna para o bloco de login após o cadastro
+        setIsRegister(false); 
       } else {
         const data = await response.json();
         setMessage(data.message);
@@ -50,7 +57,6 @@ const LoginRegister = () => {
       if (response.ok) {
         const data = await response.json();
         console.log('Login bem-sucedido:', data);
-        // Redirecionar para a página Home após o login bem-sucedido
         window.location.href = '/home';
       } else {
         const data = await response.json();
@@ -68,9 +74,9 @@ const LoginRegister = () => {
         {isRegister ? (
           <div className="register-form">
             <fieldset>
-              <legend>Cadastro</legend> 
+              <legend>Cadastro</legend>
               <form onSubmit={handleRegister}>
-              <img src="/senac.png" alt="Logo Senac" className="logo" />
+                <img src="/senac.png" alt="Logo Senac" className="logo" />
                 <input
                   type="text"
                   placeholder="Nome de usuário"
@@ -92,18 +98,25 @@ const LoginRegister = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
+                <input
+                  type="password"
+                  placeholder="Confirmar Senha"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  required
+                />
                 <button type="submit">Registrar</button>
               </form>
-              <p className='msg-bd'>{message}</p>
-              <p className='login-register' onClick={toggleForm}>Já tem uma conta? Faça login</p>
+              <p className="msg-bd">{message}</p>
+              <p className="login-register" onClick={toggleForm}>Já tem uma conta? Faça login</p>
             </fieldset>
           </div>
         ) : (
           <div className="login-form">
             <fieldset>
-              <legend>Login</legend> {/* Título opcional para o fieldset */}
+              <legend>Login</legend>
               <form onSubmit={handleLogin}>
-              <img src="/senac.png" alt="Logo Senac" className="logo" />
+                <img src="/senac.png" alt="Logo Senac" className="logo" />
                 <input
                   type="email"
                   placeholder="Email"
@@ -120,14 +133,13 @@ const LoginRegister = () => {
                 />
                 <button type="submit">Login</button>
               </form>
-              <p className='msg-bd-rg'>{message}</p>
-              <p className='login-register' onClick={toggleForm}>Não tem uma conta? Cadastre-se</p>
+              <p className="msg-bd-rg">{message}</p>
+              <p className="login-register" onClick={toggleForm}>Não tem uma conta? Cadastre-se</p>
             </fieldset>
           </div>
         )}
       </div>
     </div>
-
   );
 };
 

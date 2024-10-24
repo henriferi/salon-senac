@@ -13,20 +13,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Aumenta o espaço entre a imagem e o texto */
+    gap: 50px; 
     background-color: white;
-    padding: 50px; /* Aumenta o padding para mais espaço interno */
+    padding: 50px; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Aumenta a largura do container */
-    max-width: 1400px; /* Define uma largura máxima maior */
-    height: 550px; /* Aumenta a altura do container */
+    width: 90%; 
+    max-width: 1400px; 
+    height: 550px; 
   }
   
   .match-content img {
-    width: 50%; /* Aumenta o tamanho da imagem */
-    height: 100%; /* A imagem ocupa a altura do container */
-    object-fit: cover; /* Garante que a imagem seja redimensionada corretamente */
+    width: 50%; 
+    height: 100%; 
+    object-fit: cover; 
     border-radius: 10px;
   }
   
@@ -36,44 +36,44 @@
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    width: 50%; /* O texto ocupa metade da largura restante */
+    width: 50%; 
   }
   
   .match-content-text h1 {
-    font-size: 3rem; /* Aumenta o tamanho do título */
+    font-size: 3rem; 
     color: #006B99;
     margin-bottom: 20px;
   }
   
   .match-content-text p {
-    font-size: 1.6rem; /* Aumenta o tamanho da descrição */
+    font-size: 1.6rem; 
     color: #333;
     margin-bottom: 20px;
   }
   
   .match-content-text label {
-    font-size: 1.4rem; /* Aumenta o tamanho do label */
+    font-size: 1.4rem; 
     margin-bottom: 10px;
   }
   
   .match-content-text input[type="date"] {
-    padding: 15px; /* Aumenta o padding do input */
-    font-size: 1.3rem; /* Aumenta o tamanho da fonte do input */
+    padding: 15px; 
+    font-size: 1.3rem; 
     border-radius: 5px;
     border: 1px solid #ccc;
   }
   
   .buttons {
     display: flex;
-    gap: 30px; /* Aumenta o espaço entre os botões */
+    gap: 30px; 
     margin-top: 30px;
   }
   
   .buttons button {
     background-color: #006B99;
     color: white;
-    padding: 15px 30px; /* Aumenta o padding dos botões */
-    font-size: 1.5rem; /* Aumenta o tamanho da fonte dos botões */
+    padding: 15px 30px; 
+    font-size: 1.5rem; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -96,39 +96,39 @@
     .match-content {
       flex-direction: column;
       width: 100%;
-      height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+      height: auto; 
       padding: 20px;
     }
   
     .match-content img {
-      width: 100%; /* A imagem ocupará 100% da largura em telas pequenas */
-      height: auto; /* Altura se ajustará ao conteúdo */
+      width: 100%; 
+      height: auto; 
       margin-top: 10%;
     }
   
     .match-content-text {
-      width: 100%; /* O texto ocupará 100% da largura em telas pequenas */
-      text-align: center; /* Centraliza o texto em telas pequenas */
-      align-items: center; /* Alinha o conteúdo ao centro */
+      width: 100%; 
+      text-align: center; 
+      align-items: center; 
     }
   
     .match-content-text h1 {
-      font-size: 2rem; /* Tamanho do título menor para celulares */
+      font-size: 2rem; 
     }
   
     .match-content-text p {
-      font-size: 1.4rem; /* Tamanho do parágrafo menor para celulares */
+      font-size: 1.4rem; 
     }
   
     .buttons {
       flex-direction: column;
-      gap: 20px; /* Espaçamento menor entre os botões */
-      width: 100%; /* Botões ocuparão toda a largura em telas menores */
+      gap: 20px; 
+      width: 100%;
     }
   
     .buttons button {
-      width: 100%; /* Botões ocuparão 100% da largura */
+      width: 100%; 
       padding: 10px;
-      font-size: 1.2rem; /* Fonte menor para os botões em telas pequenas */
+      font-size: 1.2rem;
     }
   }

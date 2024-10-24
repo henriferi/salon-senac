@@ -102,14 +102,13 @@ const Home = () => {
   ];
 
   const handleMatch = (style) => {
-    navigate('/matches', { state: { style } }); // Redireciona para a tela de Matches com os dados do estilo
+    navigate('/matches', { state: { style } }); 
   };
 
   return (
     <>
       <Header />
       <div className="home-container">
-        {/* Textos de incentivo e contatos */}
         <div className="info-section">
           <img src="/senac.png" alt="Logo Senac" className='logo' />
           <h1>Venha conhecer nossos serviços!</h1>
@@ -117,14 +116,13 @@ const Home = () => {
           <p>Contato: (81) 99999-9999 | Email: contato@senacpe.com.br</p>
         </div>
 
-        {/* Grid de imagens */}
         <div className="grid-container">
           {stylesData.map((style) => (
             <div key={style.id} className="style-card">
               <img
                 src={style.image}
                 alt={style.title}
-                style={{ width: '100%', height: '250px', objectFit: 'cover' }} // Tamanhos fixos para a imagem
+                style={{ width: '100%', height: '250px', objectFit: 'cover' }} 
               />
               <h2>{style.title}</h2>
               <p>{style.description}</p>

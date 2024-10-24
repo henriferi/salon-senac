@@ -21,9 +21,12 @@ model User {
 }
 
 model Feedback {
-  id      Int     @id @default(autoincrement())
-  name    String
-  email   String
-  comment String
-  password String 
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  comment   String
+  password  String
+  photo     String?  
+  rating    Int      
+  createdAt DateTime @default(now())
 }

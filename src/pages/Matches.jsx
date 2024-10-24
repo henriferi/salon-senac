@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import './Matches.css'; // Importando o arquivo CSS
+import './Matches.css'; 
 
 const Match = () => {
   const location = useLocation();
@@ -16,15 +16,14 @@ const Match = () => {
   };
 
   const handleCancelMatch = () => {
-    navigate('/home'); // Volta para a Home ao cancelar o match
+    navigate('/home'); 
   };
 
   const handleScheduleAppointment = () => {
     const chosenDate = new Date(selectedDate);
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Remove horas para comparar apenas a data
+    today.setHours(0, 0, 0, 0); 
 
-    // Verifica se a data está vazia ou se é anterior à data atual
     if (!selectedDate || chosenDate <= today) {
       alert('Data inválida! Por favor, escolha uma data futura.');
     } else {
