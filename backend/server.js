@@ -49,7 +49,7 @@ app.post('/login', async (req, res) => {
   });
 
   if (!user || user.password !== password) {
-    return res.status(400).json({ message: 'Credenciais inválidas.' });
+    return res.status(400).json({ message: 'Login ou senha inválidos.' });
   }
 
   // Autenticação bem-sucedida

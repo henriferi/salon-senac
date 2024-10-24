@@ -68,7 +68,7 @@ const LoginRegister = () => {
         {isRegister ? (
           <div className="register-form">
             <fieldset>
-              <legend>Cadastro</legend> {/* Título opcional para o fieldset */}
+              <legend>Cadastro</legend> 
               <form onSubmit={handleRegister}>
               <img src="/senac.png" alt="Logo Senac" className="logo" />
                 <input
@@ -94,8 +94,8 @@ const LoginRegister = () => {
                 />
                 <button type="submit">Registrar</button>
               </form>
-              <p>{message}</p>
-              <p onClick={toggleForm}>Já tem uma conta? Faça login</p>
+              <p className='msg-bd'>{message}</p>
+              <p className='login-register' onClick={toggleForm}>Já tem uma conta? Faça login</p>
             </fieldset>
           </div>
         ) : (
@@ -120,8 +120,8 @@ const LoginRegister = () => {
                 />
                 <button type="submit">Login</button>
               </form>
-              <p>{message}</p>
-              <p onClick={toggleForm}>Não tem uma conta? Cadastre-se</p>
+              <p className='msg-bd-rg'>{message}</p>
+              <p className='login-register' onClick={toggleForm}>Não tem uma conta? Cadastre-se</p>
             </fieldset>
           </div>
         )}

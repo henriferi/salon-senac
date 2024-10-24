@@ -24,7 +24,7 @@
 }
 
 
-form {
+.auth-container form {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -32,15 +32,16 @@ form {
   padding: 3rem;
 }
 
-input {
+.auth-container input {
   padding: 15px; /* Aumenta o espaço interno dos campos de entrada */
+  width: 20vw;
   font-size: 1.5rem; /* Tamanho de fonte maior */
   border-radius: 10px; /* Cantos arredondados nos campos de entrada */
   outline: none;
   border: none;
 }
 
-button {
+.auth-container button {
   color: white;
   margin-top: 1.5rem;
   width: 50%;
@@ -53,24 +54,33 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.auth-container button:hover {
   background-color: #005B8C;
 }
 
-p {
+.login-register {
   cursor: pointer;
   color: whitesmoke;
   text-decoration: underline;
 }
 
-fieldset {
+.msg-bd {
+  color: red;
+  text-decoration: none;
+}
+
+.msg-bd-rg{
+  color: blue;
+  text-decoration: none;
+}
+.auth-container fieldset {
   background-color: rgba(173, 216, 230, 0.5);
   border: 2px solid #006B99; /* Borda colorida para o fieldset */
   border-radius: 5px; /* Cantos arredondados */
   width: 100%; /* Garante que o fieldset ocupe 100% da largura */
 }
 
-legend {
+.auth-container legend {
   background-color: #006B99;
   border-radius: 5px;
   color: white;
@@ -99,7 +109,5 @@ legend {
   input, button {
     font-size: 1rem; /* Ajusta o tamanho da fonte para dispositivos menores */
   }
-  form {
-    padding: 0;
-  }
+
 }

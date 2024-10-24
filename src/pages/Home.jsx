@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import Header from '../components/Header'
+import Footer from '../components/Footer';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -80,6 +81,24 @@ const Home = () => {
       title: 'Coloração Vibrante',
       description: 'Cores vibrantes para um visual ousado.',
     },
+    {
+      id: 13,
+      image: '/senac-match.jpg',
+      title: 'Coloração Vibrante',
+      description: 'Cores vibrantes para um visual ousado.',
+    },
+    {
+      id: 14,
+      image: '/senac-match.jpg',
+      title: 'Coloração Vibrante',
+      description: 'Cores vibrantes para um visual ousado.',
+    },
+    {
+      id: 15,
+      image: '/senac-match.jpg',
+      title: 'Coloração Vibrante',
+      description: 'Cores vibrantes para um visual ousado.',
+    },
   ];
 
   const handleMatch = (style) => {
@@ -90,13 +109,9 @@ const Home = () => {
     <>
       <Header />
       <div className="home-container">
-        {/* Logo do Senac como background */}
-        <div className="logo-background">
-          <img src="/images/senac-logo.png" alt="Logo Senac" />
-        </div>
-
         {/* Textos de incentivo e contatos */}
         <div className="info-section">
+          <img src="/senac.png" alt="Logo Senac" className='logo' /> 
           <h1>Venha conhecer nossos serviços!</h1>
           <p>Transforme seu visual com os melhores profissionais do Senac.</p>
           <p>Contato: (81) 99999-9999 | Email: contato@senacpe.com.br</p>
@@ -114,6 +129,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

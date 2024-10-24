@@ -2,17 +2,17 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #8e24aa;
-    padding: 10px 0;
+    background-color: #006B99;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
   }
   
   .menu {
     list-style: none;
+    padding: 1em;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10%;
   }
   
   .menu li a {
@@ -22,6 +22,15 @@
   }
   
   .menu li a:hover {
-    color: #ffcc00;
+    color: black;
   }
+
   
+  @media (max-width: 768px) {
+    .menu {
+      gap: 8%;
+    }
+    .icon {
+      display: none;
+    }
+  }
