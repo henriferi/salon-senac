@@ -5,8 +5,8 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 generator client {
@@ -14,9 +14,9 @@ generator client {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
-  username String  @unique
-  email    String  @unique
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  email    String @unique
   password String
 }
 
@@ -26,7 +26,7 @@ model Feedback {
   email     String
   comment   String
   password  String
-  photo     String?  
-  rating    Int      
+  photo     String?
+  rating    Int
   createdAt DateTime @default(now())
 }
